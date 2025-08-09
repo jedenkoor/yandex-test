@@ -1,0 +1,45 @@
+.participants {
+  margin-bottom: 14rem;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+  &__title {
+    display: inline;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 5.4rem;
+    text-transform: uppercase;
+  }
+  &__wrap {
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    gap: var(--space-5);
+    padding-left: 0;
+    list-style: none;
+  }
+  &__item {
+    flex: 0 0 calc(33.33% - 13.33px);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-item {
+    &__img {
+      width: 32rem;
+      margin-bottom: var(--space-7);
+    }
+    &__name {
+      margin-bottom: 0.6rem;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+    &__position {
+      margin-bottom: var(--space-5);
+      opacity: 0.6;
+    }
+  }
+}

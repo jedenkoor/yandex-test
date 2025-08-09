@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "1.77.6",
     "vite": "^7.1.0",
-    "sass": "1.77.6"
+    "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"

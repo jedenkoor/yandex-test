@@ -1,0 +1,40 @@
+.slider {
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    display: flex;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    @include hover {
+      &:hover {
+        background-color: var(--secondary);
+      }
+    }
+    @include active {
+      &:active {
+        background-color: var(--secondary);
+      }
+    }
+    &.--disabled {
+      background-color: #D6D6D6;
+    }
+  }
+  &__counter {
+    display: flex;
+    align-items: center;
+    margin: 0 1.4rem;
+    font-size: 1.6rem;
+    span {
+      opacity: 0.6;
+      &:nth-child(1) {
+        opacity: 1;
+      }
+      &:nth-child(2) {
+        margin: 0 var(--space-1);
+      }
+    }
+  }
+}

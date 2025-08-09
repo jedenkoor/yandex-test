@@ -4,8 +4,12 @@
 @import "variables";
 @import "global";
 
-@import "components/header";
+@import "components/base/header";
+@import "components/base/running";
+@import "components/base/footer";
+@import "components/base/slider";
 
-@import "components/hero";
-
-@import "components/footer";
+@import "components/sections/hero";
+@import "components/sections/info";
+@import "components/sections/stages";
+@import "components/sections/participants";

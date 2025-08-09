@@ -1,0 +1,75 @@
+html {
+  font-size: 10px !important;
+  @media screen and (min-width: 1921px) {
+    font-size: 0.52vw !important;
+  }
+}
+
+body {
+  font-family: 'Golos Text', sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 136.6rem;
+  margin: 0 auto;
+  padding: 0 7.2rem;
+  @include respond-to($pb) {
+    padding: 0 2rem;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.2s;
+  line-height: inherit;
+  text-align: left;
+}
+
+p {
+  margin-top: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: normal;
+}

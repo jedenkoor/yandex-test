@@ -1,0 +1,30 @@
+$ps: 'phone-small';
+$pb: 'phone-big';
+$ts: 'tablet-small';
+$tb: 'tablet-big';
+$l: 'laptop';
+$d: 'desktop';
+
+@mixin respond-to($media) {
+  @if $media == $ps {
+    @media (max-width: 375px) { @content; }
+  } @else if $media == $pb {
+    @media (max-width: 768px) { @content; }
+  } @else if $media == $ts {
+    @media (max-width: 1023px) { @content; }
+  } @else if $media == $tb {
+    @media (max-width: 1199px) { @content; }
+  } @else if $media == $l {
+    @media (max-width: 1346px) { @content; }
+  } @else if $media == $d {
+    @media (max-width: 1900px) { @content; }
+  }
+}
+
+@mixin hover {
+  @media (any-hover: hover) { @content; }
+}
+
+@mixin active {
+  @media (any-pointer: coarse) { @content; }
+}

@@ -1,4 +1,4 @@
-<section class="stages">
+<section class="slider stages" data-dots>
   <div class="container">
     <div class="stages__top">
       <h2 class="stages__title">
@@ -7,7 +7,7 @@
       <span>Будущие источники обогащения васюкинцев</span>
     </div>
     <div class="stages__content">
-      <ul class="stages__list">
+      <ul class="stages__list --desktop">
         <li class="stages__item">Строительство железнодорожной магистрали Москва-Васюки</li>
         <li class="stages__item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</li>
         <li class="stages__item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</li>
@@ -16,6 +16,43 @@
         <li class="stages__item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
         <li class="stages__item">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</li>
       </ul>
+
+      <div class="slider__wrapper">
+        <ul class="slider__slides stages__list --mobile">
+          <li class="slider__slide stages__slide">
+            <div class="stages__item">Строительство железнодорожной магистрали Москва-Васюки</div>
+            <div class="stages__item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
+          </li>
+          <li class="slider__slide stages__slide">
+            <div class="stages__item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+          </li>
+          <li class="slider__slide stages__slide">
+            <div class="stages__item">Строительство дворца для турнира</div>
+            <div class="stages__item">Размещение гаражей для гостевого автотранспорта</div>
+          </li>
+          <li class="slider__slide stages__slide">
+            <div class="stages__item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
+          </li>
+          <li class="slider__slide stages__slide">
+            <div class="stages__item">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slider__btns stages__btns">
+        <button class="slider__btn --prev" type="button">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.5382 30.4615L16.0767 21.9999L24.5382 13.5384" stroke="white" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <div class="slider__dots"></div>
+        <button class="slider__btn --next" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <path d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </button>
+      </div>
+
       <picture class="stages__img">
         <source srcset="/src/images/stages/stages.webp" type="image/webp">
         <img loading="lazy" src="/src/images/stages/stages.png" alt="Самолет">

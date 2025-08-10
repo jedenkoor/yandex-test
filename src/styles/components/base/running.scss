@@ -9,6 +9,10 @@
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
+  @include respond-to($pb) {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
   &__content {
     display: flex;
     &.--1 {

@@ -29,6 +29,9 @@ body {
   max-width: 136.6rem;
   margin: 0 auto;
   padding: 0 var(--space-14);
+  @include respond-to($tb) {
+    padding: 0 var(--space-8);
+  }
   @include respond-to($pb) {
     padding: 0 var(--space-5);
   }
@@ -119,6 +122,10 @@ h3 {
         background-color: var(--black);
         color: var(--white);
       }
+    }
+    @include respond-to($pb) {
+      border-color: transparent;
+      background-color: rgba(255, 255, 255, 0.9);
     }
   }
   &.--tertiary {

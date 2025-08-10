@@ -2,6 +2,18 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   padding: 2.6rem 0;
+  @include respond-to($pb) {
+    padding: var(--space-4) 0;
+  }
+  &__logo {
+    svg {
+      width: 24.6rem;
+      @include respond-to($pb) {
+        width: 21.3rem;
+      }
+    }
+  }
 }

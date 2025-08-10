@@ -1,13 +1,25 @@
 .info {
   margin-bottom: 18.7rem;
   padding-top: var(--space-15);
+  @include respond-to($tb) {
+    margin-bottom: 12.2rem;
+  }
+  @include respond-to($pb) {
+    padding-top: var(--space-11);
+  }
   &__row {
     display: flex;
     align-items: center;
+    @include respond-to($ts) {
+      flex-direction: column;
+    }
     &.--2 {
       margin-top: 3.5rem;
       .info__title {
         margin-bottom: 6rem;
+        @include respond-to($ts) {
+          margin: var(--space-5) 0 var(--space-10);
+        }
       }
     }
   }
@@ -16,24 +28,60 @@
     font-size: 3.6rem;
     line-height: 1.35;
     text-transform: uppercase;
+    @include respond-to($l) {
+      font-size: 2.8rem;
+    }
+    @include respond-to($ps) {
+      font-size: 2.4rem;
+    }
+    &.--mobile {
+      display: none;
+      @include respond-to($ts) {
+        display: block;
+      }
+    }
     span {
-      color: var(--accent);
-      font-weight: 700;
+      &.--red {
+        color: var(--accent);
+        font-weight: 700;
+      }
+      &.--desktop {
+        @include respond-to($ts) {
+          display: none;
+        }
+      }
     }
   }
   &__img {
     &.--1 {
       flex: 0 0 39.4rem;
       margin-left: var(--space-13);
+      @include respond-to($ts) {
+        flex: auto;
+        margin: var(--space-6) 0 2.8rem;
+      }
     }
     &.--2 {
       flex: 0 0 52.5rem;
       margin-right: var(--space-5);
       margin-left: -2.7rem;
+      @include respond-to($l) {
+        flex: 0 0 48.5rem;
+      }
+      @include respond-to($tb) {
+        flex: 0 0 38.5rem;
+      }
+      @include respond-to($ts) {
+        margin-left: -1.9rem;
+        margin-right: -1.7rem;
+      }
     }
   }
   &__col {
     padding-top: 1.8rem;
+    @include respond-to($pb) {
+      padding-top: var(--space-1);
+    }
   }
   &__table {
     position: relative;
@@ -45,6 +93,9 @@
       height: 100%;
       width: 0.2rem;
       background-color: #D0D0D0;
+      @include respond-to($pb) {
+        display: none;
+      }
     }
   }
   &-table {
@@ -52,12 +103,24 @@
       display: flex;
       padding: 1.5rem 0;
       border-bottom: 0.2rem solid #D0D0D0;
+      @include respond-to($pb) {
+        flex-direction: column;
+      }
       &:first-child {
         padding-top: 0;
       }
       &:last-child {
         padding-bottom: 0;
         border: none;
+      }
+      &:nth-child(4) {
+        @include respond-to($pb) {
+          flex-direction: row;
+          .info-table__cell:last-child {
+            padding-top: 0;
+            margin-left: -0.4rem;
+          }
+        }
       }
     }
     &__cell {
@@ -66,10 +129,17 @@
         flex: 0 0 30.6rem;
         padding-left: 0;
         opacity: 0.7;
+        @include respond-to($pb) {
+          flex: initial;
+        }
       }
       &:last-child {
         flex: 1;
         font-weight: 600;
+        @include respond-to($pb) {
+          padding-left: 0;
+          padding-top: var(--space-3);
+        }
       }
       span {
         position: relative;
@@ -89,5 +159,9 @@
   &__hint {
     margin-top: var(--space-11);
     color: var(--tertiary);
+    @include respond-to($pb) {
+      margin-top: var(--space-9);
+      font-size: 1.8rem;
+    }
   }
 }

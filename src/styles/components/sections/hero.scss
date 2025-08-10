@@ -2,6 +2,14 @@
   position: relative;
   padding-top: 12.4rem;
   padding-bottom: 13rem;
+  @include respond-to($tb) {
+    padding-top: 10.4rem;
+    padding-bottom: 9rem;
+  }
+  @include respond-to($pb) {
+    padding-top: 9rem;
+    padding-bottom: 29.1rem;
+  }
   &__bg {
     position: absolute;
     top: 0;
@@ -9,9 +17,22 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    img {
+      object-position: bottom;
+    }
   }
   &__content {
     max-width: 54.2rem;
+    @include respond-to($l) {
+      max-width: 49.5rem;
+    }
+    @include respond-to($tb) {
+      max-width: 45rem;
+    }
+    @include respond-to($pb) {
+      max-width: 33.5rem;
+      margin: 0 auto;
+    }
   }
   &__title {
     margin-bottom: var(--space-6);
@@ -19,6 +40,18 @@
     font-size: 6rem;
     line-height: 1.1;
     text-transform: uppercase;
+    @include respond-to($l) {
+      font-size: 5.5rem;
+    }
+    @include respond-to($tb) {
+      font-size: 5rem;
+    }
+    @include respond-to($pb) {
+      font-size: 3.6rem;
+    }
+    @include respond-to($ps) {
+      font-size: 3.1rem;
+    }
     span {
       display: block;
       &:first-child {
@@ -34,9 +67,16 @@
     text-align: center;
     font-size: 1.8rem;
     line-height: 1.3;
+    @include respond-to($pb) {
+      text-align: left;
+      margin-bottom: var(--space-8);
+    }
   }
   &__btns {
     display: flex;
+    @include respond-to($ts) {
+      flex-direction: column;
+    }
   }
   &__btn {
     flex: 1;
@@ -46,11 +86,25 @@
     padding-bottom: 1.3rem;
     font-size: 1.6rem;
     line-height: 1.3;
+    @include respond-to($pb) {
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
+    }
     span {
       max-width: 16.5rem;
+      @include respond-to($ts) {
+        max-width: none;
+      }
     }
     &:not(:last-child) {
       margin-right: var(--space-4);
+      @include respond-to($ts) {
+        margin-right: 0;
+        margin-bottom: var(--space-4);
+      }
+      @include respond-to($pb) {
+        margin-bottom: 1.4rem;
+      }
     }
   }
 }

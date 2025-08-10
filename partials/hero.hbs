@@ -1,5 +1,7 @@
 <section class="hero">
   <picture class="hero__bg">
+    <source srcset="/src/images/hero/hero-mobile.webp" type="image/webp" media="(max-width: 767px)">
+    <source srcset="/src/images/hero/hero-mobile.jpg" type="image/jpg" media="(max-width: 767px)">
     <source srcset="/src/images/hero/hero.webp" type="image/webp">
     <img loading="lazy" src="/src/images/hero/hero.jpg" alt="Фон баннера">
   </picture>
@@ -12,10 +14,10 @@
       </h1>
       <p class="hero__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
       <div class="hero__btns">
-        <button class="btn --primary hero__btn" type="button">
+        <button class="btn --primary hero__btn" type="button" data-anchor="#support">
           <span>Поддержать шахматную мысль</span>
         </button>
-        <button class="btn --secondary hero__btn" type="button">
+        <button class="btn --secondary hero__btn" type="button" data-anchor="#info">
           <span>Подробнее о турнире</span>
         </button>
       </div>
